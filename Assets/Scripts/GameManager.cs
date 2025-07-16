@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
 
     public BoardManager boardManager;
 
-    public List<PlayerPiece> playerPieces = new List<PlayerPiece>();
-    public List<EnemyPiece> enemyPieces = new List<EnemyPiece>();
+    public List<BasePlayerPiece> playerPieces = new List<BasePlayerPiece>();
+    public List<BaseEnemyPiece> enemyPieces = new List<BaseEnemyPiece>();
 
     private bool actionInProgress = false;
 
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         SpawnPlayerPiece(2, 0);
 
-        SpawnEnemyPiece(2, 4);
+        SpawnEnemyPiece(1, 4);
     }
 
     public void SpawnPlayerPiece(int x, int y)
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         worldPos.z = -1;
 
         GameObject go = Instantiate(boardManager.playerPiecePrefab, worldPos, Quaternion.identity);
-        PlayerPiece piece = go.GetComponent<PlayerPiece>();
+        BasePlayerPiece piece = go.GetComponent<BasePlayerPiece>();
         piece.x = x;
         piece.y = y;
         boardManager.tiles[x, y].PlacePiece(piece);
@@ -51,9 +51,10 @@ public class GameManager : MonoBehaviour
     public void SpawnEnemyPiece(int x, int y)
     {
         Vector3 worldPos = boardManager.tiles[x, y].transform.position;
+        worldPos.z = -1;
 
-        GameObject go = Instantiate(boardManager.enemyPiecePrefab, worldPos, Quaternion.identity);
-        EnemyPiece piece = go.GetComponent<EnemyPiece>();
+        GameObject go = Instantiate(boardManager.enemyKnightPrefab, worldPos, Quaternion.identity);
+        BaseEnemyPiece piece = go.GetComponent<BaseEnemyPiece>();
         piece.x = x;
         piece.y = y;
         boardManager.tiles[x, y].PlacePiece(piece);

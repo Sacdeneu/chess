@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4532121124471731704}
   - component: {fileID: 5176890854945444589}
   - component: {fileID: 8443667180802331768}
-  - component: {fileID: 473266039253409905}
+  - component: {fileID: 4894386974323976390}
   m_Layer: 0
-  m_Name: EnemyPiecePrefab
+  m_Name: KnightPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5586953, g: 0.6051023, b: 0.764151, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2a81543cf008e1a46862a56e6b6ae27c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9985139, y: 0.9982673}
   m_EdgeRadius: 0
---- !u!114 &473266039253409905
+--- !u!114 &4894386974323976390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3926814527665687312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 868d7d2247b2da142828cfe2292bba91, type: 3}
+  m_Script: {fileID: 11500000, guid: c43b439dac5e48848a8bc655723e3e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0
